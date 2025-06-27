@@ -1,17 +1,17 @@
-README.md ফাইল তৈরি করি যাতে ইউজাররা সহজে টুলটি ইনস্টল এবং ব্যবহার করতে পারে:
+*****Python Library Tools*****
+***Powered by Mahedi Hasan Rafsun***
 
 ```bash
-# README.md ফাইল তৈরি
 cat > ~/python-lib-tools/README.md << 'EOF'
 # Python Library Installation Tool
 
 A comprehensive tool for easily installing Python libraries in Termux, organized by categories.
 
 **Created by:** Mahedi Hasan Rafsun  
+**Created Time:** 2025-06-27 18:14:36
 **GitHub:** [@mhrtuch240](https://github.com/mhrtuch240)  
 **Email:** developer.mahedihasanrafsun@gmail.com  
-**Phone:** +8801306654467  
-**Last Updated:** 2025-06-27 17:43:58
+**Phone:** +8801306654467
 
 ## Features
 - 20 organized categories of Python libraries
@@ -21,6 +21,63 @@ A comprehensive tool for easily installing Python libraries in Termux, organized
 - One-click installation of libraries
 - Error handling and feedback
 - Simple navigation system
+
+## Installation Process
+
+### Step 1: Update Termux
+```bash
+pkg update && pkg upgrade
+```
+
+### Step 2: Install Required Packages
+```bash
+pkg install -y python python-pip vim git
+```
+
+### Step 3: Clone Repository
+```bash
+git clone https://github.com/mhrtuch240/python-lib-tools.git
+```
+
+### Step 4: Navigate to Directory
+```bash
+cd python-lib-tools
+```
+
+### Step 5: Make Script Executable
+```bash
+chmod +x piptools.sh
+```
+
+## How to Use
+
+### Step 1: Start the Tool
+```bash
+cd ~/python-lib-tools
+bash piptools.sh
+```
+
+### Step 2: Select Category
+- You will see 20 different categories numbered from 1 to 20
+- Enter the number of your desired category
+- For example, enter '1' for AI and Machine Learning
+
+### Step 3: Choose Library
+- After selecting a category, you'll see 15 libraries
+- Each library has a number (1-15)
+- Enter the number of the library you want to install
+- The tool will automatically install your selected library
+
+### Step 4: Installation Process
+- The tool will show installation progress
+- Green text indicates successful installation
+- Red text indicates installation failure
+- Press Enter to continue after installation
+
+### Step 5: Navigation
+- Enter '0' to go back to main menu
+- Select another category or library
+- You can install multiple libraries
 
 ## Categories Available
 1. AI and Machine Learning
@@ -44,56 +101,6 @@ A comprehensive tool for easily installing Python libraries in Termux, organized
 19. System Administration
 20. Data Validation
 
-## Installation
-
-### Method 1: Quick Install
-```bash
-# Update Termux packages
-pkg update && pkg upgrade
-
-# Install required packages
-pkg install -y python python-pip vim git
-
-# Clone the repository
-git clone https://github.com/mhrtuch240/python-lib-tools.git
-
-# Go to directory
-cd python-lib-tools
-
-# Run setup script
-chmod +x setup.sh
-./setup.sh
-
-# Restart Termux
-exit
-```
-
-### Method 2: Manual Installation
-```bash
-# Create directory
-mkdir -p ~/python-lib-tools
-
-# Copy the script files
-cd ~/python-lib-tools
-# Copy piptools.sh and setup.sh files here
-
-# Make files executable
-chmod +x setup.sh piptools.sh
-
-# Add to PATH
-echo "alias piptools='bash ~/python-lib-tools/piptools.sh'" >> ~/.bashrc
-
-# Reload bashrc
-source ~/.bashrc
-```
-
-## Usage
-1. Open Termux
-2. Type `piptools` and press Enter
-3. Select a category (1-20)
-4. Choose a library to install (1-15)
-5. Wait for installation to complete
-
 ## Categories and Libraries
 
 ### 1. AI and Machine Learning
@@ -114,57 +121,35 @@ source ~/.bashrc
 
 ## Troubleshooting
 
-### If piptools command not found:
+If you encounter any issues:
+
+1. Make sure Termux is up to date:
 ```bash
-source ~/.bashrc
-```
-or
-```bash
-bash ~/python-lib-tools/piptools.sh
+pkg update && pkg upgrade
 ```
 
-### If permission denied:
+2. Check if Python and pip are installed:
 ```bash
-chmod +x ~/python-lib-tools/piptools.sh
+python --version
+pip --version
 ```
 
-### If setup fails:
+3. Try reinstalling the tool:
 ```bash
-# Reinstall the tool
 rm -rf ~/python-lib-tools
-# Then follow installation steps again
+git clone https://github.com/mhrtuch240/python-lib-tools.git
+cd python-lib-tools
+chmod +x piptools.sh
 ```
-
-## Updates
-To update the tool:
-```bash
-cd ~/python-lib-tools
-git pull
-./setup.sh
-```
-
-## Contribution
-Feel free to contribute to this project by:
-- Suggesting new libraries
-- Reporting bugs
-- Adding new features
-- Improving documentation
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License.
 
 ## Contact
 For any queries or suggestions:
 - GitHub: [@mhrtuch240](https://github.com/mhrtuch240)
 - Email: developer.mahedihasanrafsun@gmail.com
 - Phone: +8801306654467
-
-## Changelog
-- 2025-06-27: Initial release
-- Added 20 categories
-- Added 300 libraries
-- Implemented color interface
-- Added error handling
 
 ## Support
 If you find this tool helpful, please star the repository and share it with others!
